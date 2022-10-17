@@ -1,0 +1,53 @@
+stages:
+  - make_assets
+  - embed_reveal
+  - docusaurus
+
+build_dir: /build
+output_type: last
+output_dir: /output
+
+make_assets:
+  plugin: command
+  options:
+    command: make
+    locations:
+      - content/chapters/template-chapter/lecture
+    args:
+      - all
+
+embed_reveal:
+  plugin: reveal_embed
+  options:
+    target: docusaurus
+    extension: mdx
+    build:
+      Template-chapter: Template-chapter
+
+docusaurus:
+  plugin: docusaurus
+  options:
+    course_name: Template
+    sidebar: js
+    structure:
+      - Lecture:
+        - Template-Chapter:
+            name: Template-chapter
+            location: /build/embed_reveal/Template-chapter
+      - Lab:
+        - Template-chapter:
+            location: content/chapters/template-chapter/lab
+            name: README
+    static_assets:
+      - Template-chapter: /build/make_assets/content/chapters/template-chapter/lecture/_site
+    config_meta:
+      title: Template Repo
+      url: http://localhost/
+      baseUrl: /
+      onBrokenLinks: warn
+      onBrokenMarkdownLinks: warn
+    config_socials:
+      Main site: https://example.com
+      OCW: https://example.com
+      Facebook: https://www.facebook.com/zuck/
+    copyright_string: Example Copyright
