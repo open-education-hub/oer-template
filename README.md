@@ -1,6 +1,7 @@
-# Template Repository
+# OER Template Repository
 
 These are open educational resources ([OER](https://en.wikipedia.org/wiki/Open_educational_resources)).
+The repository should be used as a template for the your own classes.
 
 ## Using the Content
 
@@ -64,3 +65,13 @@ Contributions are welcome.
 See the [contribution guide](CONTRIBUTING.md) on how you could report or fix issues and on how you can improve the content.
 
 Reviewers are requested to follow the [reviewing guide](REVIEWING.md).
+
+## Publishing workflow
+
+Before building the repository you have to setup the following items
+
+* select the GitHub Pages branch by following the [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) tutorial; you will have to set up the `gh-pages` branch as the publishing branch;
+* add a publishing key named `ACCESS_TOKEN` by following the [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) tutorial.
+
+In order to publish the content of this repository, we use a github workflow located in the `.github/workflows/deployment.yml`.
+This workflow will build the site using docusaurus and publish the contents to a link similar to `<repository_name>.github.io`.
