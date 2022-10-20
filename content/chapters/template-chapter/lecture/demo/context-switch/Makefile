@@ -1,2 +1,2 @@
 BINARIES = io_bound cpu_bound
-include ../../../../../common/multiple.mk
+include ../../../../../common/makefile/linux/c/multiple.mk

@@ -1,3 +1,3 @@
 BINARY = race_condition
 LDLIBS = -lpthread
-include ../../../../../common/single.mk
+include ../../../../../common/makefile/linux/c/single.mk

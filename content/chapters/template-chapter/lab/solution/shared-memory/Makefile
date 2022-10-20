@@ -1,3 +1,3 @@
 LDLIBS = -lpthread
 BINARY = shared_memory
-include ../../../../../common/makefile/single.mk
+include ../../../../../common/makefile/linux/c/single.mk
