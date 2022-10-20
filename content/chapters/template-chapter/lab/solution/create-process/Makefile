@@ -1,2 +1,2 @@
 BINARY = fork
-include ../../../../../common/makefile/single.mk
+include ../../../../../common/makefile/linux/c/single.mk

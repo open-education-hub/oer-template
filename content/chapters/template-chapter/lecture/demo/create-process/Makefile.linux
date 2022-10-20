@@ -1,2 +1,2 @@
 BINARIES = fork_exec posix_spawn system
-include ../../../../../common/multiple.mk
+include ../../../../../common/makefile/linux/c/multiple.mk

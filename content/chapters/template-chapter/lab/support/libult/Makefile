@@ -3,7 +3,7 @@ LIBULT = libult.so
 
 all: $(TEST) $(LIBULT)
 
-include ../../../../../common/makefile/linux.mk
+include ../../../../../common/makefile/linux/c/linux.mk
 
 LIB_OBJECTS = queue.o tcb.o threads.o
 TEST_OBJECTS = test_ult.o $(LOGGER)
