@@ -15,6 +15,45 @@ Content for each chapter is split in two subfolders:
 Lecture content is expected to be presented and followed.
 Practice content is expected to be used hands-on individually or as part of team.
 
+## Publishing workflow
+
+Before building the repository you have to setup the following items
+
+* select the GitHub Pages branch by following the [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) tutorial; you will have to set up the `gh-pages` branch as the publishing branch;
+* add a publishing key named `ACCESS_TOKEN` by following the [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) tutorial.
+
+In order to publish the content of this repository, we use a GitHub workflow located in the `.github/workflows/deployment.yml`.
+This workflow will build the site using [Docusaurus](https://docusaurus.io/) and publish the contents to a link similar to `<github_username>.github.io`.
+
+## Your first TODOs
+
+In order to make this repo your own, for the class that you intend to develop content for you must make the following changes:
+
+* change the repository name to match your class name, the default is `oer-template`
+* in `config.yaml`:
+  * change `title` to you class name;
+  * change `url` to `<github_usename>.github.io`;
+  * change `baseurl` to `/` if the repository is the only one with a GitHub page in your profile, otherwise, change it to `<repository_name>`;
+  * change links to social media sites, if applicable;
+
+## Running locally
+
+When testing locally, you will have to build the container that will run the builder based on the `Dockerfile` defined in the repository root as follows:
+
+```
+docker build --no-cache -f ./Dockerfile --tag oer-template/docusaurus:latest .
+```
+
+In order to run the builder which will create the repository locally, you will have to run the newly built container:
+
+```
+docker run -it -v $PWD/:/content -v $PWD/../output:/output oer-template/docusaurus:latest
+```
+
+Finally, when wanting to view the content locally you will have to start a container by running the following command:
+
+The website will be available by accessing the `http://localhost:3000` address.
+
 ## Chapter Contents
 
 ### Lecture
@@ -65,13 +104,3 @@ Contributions are welcome.
 See the [contribution guide](CONTRIBUTING.md) on how you could report or fix issues and on how you can improve the content.
 
 Reviewers are requested to follow the [reviewing guide](REVIEWING.md).
-
-## Publishing workflow
-
-Before building the repository you have to setup the following items
-
-* select the GitHub Pages branch by following the [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) tutorial; you will have to set up the `gh-pages` branch as the publishing branch;
-* add a publishing key named `ACCESS_TOKEN` by following the [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) tutorial.
-
-In order to publish the content of this repository, we use a github workflow located in the `.github/workflows/deployment.yml`.
-This workflow will build the site using docusaurus and publish the contents to a link similar to `<repository_name>.github.io`.
