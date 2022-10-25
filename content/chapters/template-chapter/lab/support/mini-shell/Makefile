@@ -1,1 +1,0 @@
-../../solution/mini-shell/Makefile

@@ -1,33 +1,20 @@
-# COMPUTE
-
-1. [Processes](#1-processes)
-1. [Threads](#2-threads)
-1. [Scheduling](#3-scheduling)
-1. [Synchronization](#4-synchronization)
+# TEMPLATE COURSE
 
 ---
 
-### Backstory
+### Included slides
 
-Software running while you are doing your homework:
-* Code editor
-* Browser with 10+ https://stackoverflow.com/ tabs
-* Discord
-* Spotify
-* Bittorrent client
-* Crypto miner
-* The OS itself
-
-Only one CPU. How?
+These slides have been included from the `slides/intro.md` file. They also contain a list as follows:
+* item 1
+* item 2
 
 ----
 
-### Some CPU internals
+### Slides including images
 
 ![CPU Internals](media/cpu-internals.jpg)
 
-* Multiple **cores** per CPU
-* Still not enough for all processes
+* A slite can also include images included using `![CPU Internals](media/cpu-internals.jpg)`
 
 ----
 
@@ -71,4 +58,4 @@ student@os:~$ ps -e
 21045 pts/5    00:00:00 ps
 ```
 
-Way more processes than cores!
+Terminal listings works the same as in regular markdown files.
