@@ -46,7 +46,7 @@ clone(child_stack=0x7f9ea7df0fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGH
 
 * Last, you can include tables
 
-| Adgantages                       | Disatvantages                              |
+| Advantages                       | Disatvantages                              |
 | :------------------------------: | :----------------------------------------: |
 | implemented by libraries         | implemented by the kernel                  |
 | blocking actions stall process   | blocking actions only stall current thread |
