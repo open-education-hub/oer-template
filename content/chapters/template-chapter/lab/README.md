@@ -10,6 +10,7 @@ This is a list of all the best cuisines in the world
 - French
 
 In order to make emphasize keywords, you can use **bold** words.
+To suggest a more metaphorical and less literal meaning of a phrase, you can use _italic_ words.
 
 ## Section the first
 
@@ -23,9 +24,9 @@ For integrating figures, you will use `![Example SVG](./media/app-os-cpu-interac
 
 Single instances of commands should be written using monotype fonts such as this `ls`.
 
-For longer outputs, you will use the following structures:
+For longer outputs, you will use the following syntax:
 
-```
+```console
 student@os:~$ which ls
 /usr/bin/ls
 
@@ -35,13 +36,14 @@ student@os:~$ file /usr/bin/ls
 
 ### Practice: Baby steps
 
-We recommend that for practice, you add a subsection for the exercises. This will make it so you can delimit the exercises from the lab's text proper.
+We recommend that for practice, you add a subsection for the exercises.
+This will make it so you can delimit the exercises from the lab's text.
 
 
 1. You can number the exercises as such
 And have the text roll over to the next line.
 
-2. This is a second numbered exercise
+1. This is a second numbered exercise
 
 **Be careful!**
 You can even link to other chapters internally [like this](./quiz/template-question.md)
