@@ -17,7 +17,7 @@ Practice content is expected to be used hands-on individually or as part of team
 
 ## Publishing workflow
 
-Before building the repository you have to setup the following items
+Before building the repository you have to set up the following items:
 
 * select the GitHub Pages branch by following the [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) tutorial; you will have to set up the `gh-pages` branch as the publishing branch;
 * add a publishing key named `ACCESS_TOKEN` by following the [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) tutorial.
@@ -27,7 +27,7 @@ This workflow will build the site using [Docusaurus](https://docusaurus.io/) and
 
 ## Your first TODOs
 
-In order to make this repo your own, for the class that you intend to develop content for you must make the following changes:
+To configure this repo for the class for which you intend to develop content, you must make the following changes:
 
 * change the repository name to match your class name, the default is `oer-template`
 * in `config.yaml`:
@@ -41,16 +41,16 @@ In order to make this repo your own, for the class that you intend to develop co
 When testing locally, you will have to build the container that will run the builder based on the `Dockerfile` defined in the repository root as follows:
 
 ```
-docker build --no-cache -f ./Dockerfile --tag oer-template/docusaurus:latest .
+docker build --no-cache -f ./Dockerfile --tag <your-repo-name>/docusaurus:latest .
 ```
 
 In order to run the builder which will create the repository locally, you will have to run the newly built container:
 
 ```
-docker run -it -v $PWD/:/content -v $PWD/../output:/output oer-template/docusaurus:latest
+docker run -it -v $PWD/:/content -v $PWD/../output:/output <your-repo-name>/docusaurus:latest
 ```
 
-Finally, when wanting to view the content locally you will have to start a container by running the following command:
+Finally, to view the content locally, you will have to start a container by running the following command:
 
 The website will be available by accessing the `http://localhost:3000` address.
 
