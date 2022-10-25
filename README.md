@@ -50,9 +50,22 @@ In order to run the builder which will create the repository locally, you will h
 docker run -it -v $PWD/:/content -v $PWD/../output:/output <your-repo-name>/docusaurus:latest
 ```
 
-Finally, to view the content locally, you will have to start a container by running the following command:
+Finally, to view the content locally, you will have to start a container by running the following command in the `output` directory
 
-The website will be available by accessing the `http://localhost:3000` address.
+```
+python3 -m http.server
+```
+
+The website will be available by accessing the `http://localhost:8000` address. To change the defualt port you will add this a parameter to the above command as follows.
+
+```
+python3 -m http.server 8888
+```
+
+This command will open the web server on port `8888`.
+
+Make sure that you run command in the `output directory`.
+
 
 ## Chapter Contents
 
