@@ -1,0 +1,41 @@
+## Slides hierarchy
+
+----
+
+## Slides hierarchy
+
+* Slides ar organized in two levels
+    * We use `---` in order to mark a new idea per slides; this leads to new vertical slides
+    * When talking about the same subject, but we want to use a new slide, we use `----`, which adds a new vertical slide
+
+----
+
+### New vertical slide
+
+* This slide ilustrates a new item of discusion on the matter of the slides hierarchy
+
+---
+
+### Animated slided
+
+* You can even animate slides like this
+
+``` [1 - 2 | 3 - 4]
+student@os:~/.../compute/lecture/demo/create-process$ strace -e clone ./fork_exec
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f7e83aa4810) = 5302
+student@os:~/.../compute/lecture/demo/create-thread$ strace -e clone ./create_thread
+clone(child_stack=0x7f9ea7df0fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, tls=0x7f9ea7df1700, child_tidptr=0x7f9ea7df19d0) = 5389
+```
+
+---
+
+### Tables
+
+* Last, you can include tables
+
+| Advantages                       | Disatvantages                              |
+| :------------------------------: | :----------------------------------------: |
+| implemented by libraries         | implemented by the kernel                  |
+| blocking actions stall process   | blocking actions only stall current thread |
+| more mapped on one kernel thread | provide support for user level threads     |
+| Java, Python                     | Linux KThreads, Windows threads            |
