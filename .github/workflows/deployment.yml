@@ -24,7 +24,7 @@ jobs:
           file: ./repo/Dockerfile
           push: false
           load: true
-          tags: operating-systems-oer/docusaurus:latest
+          tags: oer-template/docusaurus:latest
           cache-from: type=gha
           cache-to: type=gha
 
@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir output
           docker image list
-          docker run -v $GITHUB_WORKSPACE/repo:/content -v $GITHUB_WORKSPACE/output:/output operating-systems-oer/docusaurus:latest
+          docker run -v $GITHUB_WORKSPACE/repo:/content -v $GITHUB_WORKSPACE/output:/output oer-template/docusaurus:latest
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
