@@ -1,6 +1,7 @@
-# Template Repository
+# OER Template Repository
 
 These are open educational resources ([OER](https://en.wikipedia.org/wiki/Open_educational_resources)).
+The repository should be used as a template for the your own classes.
 
 ## Using the Content
 
@@ -13,6 +14,61 @@ Content for each chapter is split in two subfolders:
 
 Lecture content is expected to be presented and followed.
 Practice content is expected to be used hands-on individually or as part of team.
+
+## Publishing Workflow
+
+Before building the repository you have to set up the following items:
+
+* Select the GitHub Pages branch by following the [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) tutorial.
+   You will have to set up the `gh-pages` branch as the publishing branch.
+* Add a publishing key named `ACCESS_TOKEN` by following the [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) tutorial.
+
+In order to publish the content of this repository, we use a GitHub workflow located in `.github/workflows/deployment.yml`.
+This workflow will build the site using [Docusaurus](https://docusaurus.io/) and publish the contents to a link similar to `<github_username>.github.io`.
+
+## Your first TODOs
+
+To configure this repo for the class for which you intend to develop content, you must make the following changes:
+
+* Change the repository name to match your class name (the default name is `oer-template`).
+* In `config.yaml`:
+  * Change `title` to you class name.
+  * Change `url` to `<github_usename>.github.io`.
+  * Change `baseurl` to `/` if the repository is the only one with a GitHub page in your profile.
+     Otherwise, change it to `<repository_name>`.
+  * Change links to social media sites, if applicable.
+
+## Running Locally
+
+When testing locally, you will have to build the container that will run the builder based on the `Dockerfile` defined in the repository root as follows:
+
+```
+docker build --no-cache -f ./Dockerfile --tag <your-repo-name>/docusaurus:latest .
+```
+
+In order to run the builder which will create the repository locally, you will have to run the newly built container:
+
+```
+docker run -it -v $PWD/:/content -v $PWD/../output:/output <your-repo-name>/docusaurus:latest
+```
+
+Finally, to view the content locally, you will have to start a container by running the following command in the `output/` directory:
+
+```
+python3 -m http.server
+```
+
+The website will be available by accessing the `http://localhost:8000` address.
+To change the defualt port you will add this a parameter to the above command as follows.
+
+```
+python3 -m http.server 8888
+```
+
+This command will open the web server on port `8888`.
+
+Make sure that you run command in the `output/` directory.
+
 
 ## Chapter Contents
 
