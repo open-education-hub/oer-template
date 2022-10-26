@@ -1,22 +1,24 @@
 ## Slides hierarchy
 
-----
+---
 
-## Slides hierarchy
+## Slides Hierarchy
 
 * Slides are organized in two levels
-    * We use `---` in order to mark a new idea per slides; this leads to new horizontal slides
-    * When talking about the same subject, but we want to use a new slide, we use `----`, which adds a new vertical slide
+    * We use `---` in order to open up a new topic.
+       This leads to a new horizontal slide figuring a topic that can be expanded by vertical slides.
+    * We expand discussions on the same topic by vertical slides.
+       We use `----`, which adds a new vertical slide
 
 ----
 
-### New vertical slide
+### New Vertical Slide
 
 * This slide ilustrates a new item of discusion on the matter of the slides hierarchy
 
 ---
 
-### Animated slides
+### Animated Slides
 
 * You can even animate slides like this
 
@@ -31,7 +33,7 @@ clone(child_stack=0x7f9ea7df0fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGH
 
 ### Tables
 
-* Last, you can include tables
+You can include tables:
 
 | Advantages                       | Disatvantages                              |
 | :------------------------------: | :----------------------------------------: |

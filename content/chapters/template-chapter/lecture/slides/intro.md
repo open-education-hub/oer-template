@@ -4,7 +4,8 @@
 
 ### Included slides
 
-These slides have been included from the `slides/intro.md` file. They also contain a list as follows:
+These slides have been included from the `slides/intro.md` file.
+They also contain a list as follows:
 * item 1
 * item 2
 

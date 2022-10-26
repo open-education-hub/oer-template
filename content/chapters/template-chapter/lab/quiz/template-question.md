@@ -15,6 +15,6 @@ Which answer is the correct answer?
 
 Correct answer is the correct answer
 
-```
+```console
 echo "Guess why"
 ```
