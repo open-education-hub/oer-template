@@ -35,7 +35,7 @@ To configure this repo for the class for which you intend to develop content, yo
   * Change `title` to you class name.
   * Change `url` to `<github_usename>.github.io`.
   * Change `baseurl` to `/` if the repository is the only one with a GitHub page in your profile.
-     Otherwise, change it to `<repository_name>`.
+     Otherwise, change it to `/<repository_name>/`.
   * Change links to social media sites, if applicable.
 
 ## Running Locally
