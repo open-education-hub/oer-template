@@ -34,7 +34,7 @@ To configure this repo for the class for which you intend to develop content, yo
   * change `title` to you class name;
   * change `url` to `<github_usename>.github.io`;
   * change `baseurl` to `/` if the repository is the only one with a GitHub page in your profile, otherwise, change it to `<repository_name>`;
-  * change links to social media sites, if applicable;
+  * change links to social media sites, if applicable.
 
 ## Running locally
 
@@ -56,7 +56,8 @@ Finally, to view the content locally, you will have to start a container by runn
 python3 -m http.server
 ```
 
-The website will be available by accessing the `http://localhost:8000` address. To change the defualt port you will add this a parameter to the above command as follows.
+The website will be available by accessing the `http://localhost:8000` address.
+To change the defualt port you will add this a parameter to the above command as follows.
 
 ```
 python3 -m http.server 8888
@@ -64,7 +65,7 @@ python3 -m http.server 8888
 
 This command will open the web server on port `8888`.
 
-Make sure that you run command in the `output directory`.
+Make sure that you run command in the `output` directory.
 
 
 ## Chapter Contents
