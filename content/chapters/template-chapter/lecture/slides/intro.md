@@ -14,7 +14,7 @@ These slides have been included from the `slides/intro.md` file. They also conta
 
 ![CPU Internals](media/cpu-internals.jpg)
 
-* A slite can also include images included using `![CPU Internals](media/cpu-internals.jpg)`
+* A slide can also include images included using `![CPU Internals](media/cpu-internals.jpg)`
 
 ----
 
@@ -58,4 +58,4 @@ student@os:~$ ps -e
 21045 pts/5    00:00:00 ps
 ```
 
-Terminal listings works the same as in regular markdown files.
+Terminal listings work the same as in regular markdown files.

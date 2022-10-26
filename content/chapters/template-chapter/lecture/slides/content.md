@@ -4,8 +4,8 @@
 
 ## Slides hierarchy
 
-* Slides ar organized in two levels
-    * We use `---` in order to mark a new idea per slides; this leads to new vertical slides
+* Slides are organized in two levels
+    * We use `---` in order to mark a new idea per slides; this leads to new horizontal slides
     * When talking about the same subject, but we want to use a new slide, we use `----`, which adds a new vertical slide
 
 ----
@@ -16,7 +16,7 @@
 
 ---
 
-### Animated slided
+### Animated slides
 
 * You can even animate slides like this
 
