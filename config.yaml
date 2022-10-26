@@ -46,7 +46,7 @@ docusaurus:
     config_meta:
       title: Template Repo
       url: http://localhost/
-      baseUrl: /
+      baseUrl: /oer-template/
       onBrokenLinks: warn
       onBrokenMarkdownLinks: warn
     config_socials:
