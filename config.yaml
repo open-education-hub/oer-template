@@ -30,6 +30,9 @@ docusaurus:
     course_name: Template
     sidebar: js
     structure:
+      - Introduction:
+            location: content/intro
+            name: README
       - Lecture:
         - Template-Chapter:
             name: Template-chapter

@@ -1,4 +1,4 @@
-FROM ghcr.io/open-education-hub/openedu_builder:0.2
+FROM ghcr.io/open-education-hub/openedu_builder:0.3.1
 
 # Install ffmpeg
 RUN apt-get update && \

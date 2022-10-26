@@ -1,1 +1,0 @@
-../../solution/shared-memory/Makefile
