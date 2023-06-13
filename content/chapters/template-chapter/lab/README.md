@@ -2,6 +2,8 @@
 
 This is an instance of a lab placeholder. This will be used to showcase the different highlights of the syntax.
 
+This is another sentence
+
 In order to use links to to outside resources, you can add them as [such](http://example.com).
 
 This is a list of all the best cuisines in the world
