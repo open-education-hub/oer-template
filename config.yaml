@@ -30,17 +30,13 @@ docusaurus:
     course_name: Template
     sidebar: js
     structure:
-      - Introduction:
-            location: content/intro
-            name: README
+      - Introduction/: content/intro/
       - Lecture:
-        - Template-Chapter:
-            name: Template-chapter
-            location: /build/embed_reveal/Template-chapter
+          - Template-Chapter: /build/embed_reveal/Template-chapter
       - Lab:
-        - Template-chapter:
-            location: content/chapters/template-chapter/lab
-            name: README
+          path: content/chapters/template-chapter/
+          subsections:
+            - Template-chapter/: lab/
     static_assets:
       - Template-chapter: /build/make_assets/content/chapters/template-chapter/lecture/_site
     config_meta:
