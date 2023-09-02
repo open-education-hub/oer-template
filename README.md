@@ -40,35 +40,23 @@ To configure this repo for the class for which you intend to develop content, yo
 
 ## Running Locally
 
-When testing locally, you will have to build the container that will run the builder based on the `Dockerfile` defined in the repository root as follows:
+When testing locally, you will have to build the container that will run the builder based on the [`Dockerfile`](Dockerfile).
+For this, the simplest way is the use the [`Makefile`](Makefile).
+First, edit the `Makefile` and update the `REPO_NAME` variable to the preferred name of your future website.
 
-```
-docker build --no-cache -f ./Dockerfile --tag <your-repo-name>/docusaurus:latest .
-```
+To generate the web contents locally, run:
 
-In order to run the builder which will create the repository locally, you will have to run the newly built container:
-
-```
-docker run -it -v $PWD/:/content -v $PWD/../output:/output <your-repo-name>/docusaurus:latest
+```console
+make
 ```
 
-Finally, to view the content locally, you will have to start a container by running the following command in the `output/` directory:
+To view the local contents, start a web server by running the command:
 
-```
-python3 -m http.server
-```
-
-The website will be available by accessing the `http://localhost:8000` address.
-To change the defualt port you will add this a parameter to the above command as follows.
-
-```
-python3 -m http.server 8888
+```console
+make serve
 ```
 
-This command will open the web server on port `8888`.
-
-Make sure that you run command in the `output/` directory.
-
+As the output of the command tells, point your browser to `http://localhost:8080/$REPO_NAME`, where `$REPO_NAME` is the name of the repository you configured in the [`Makefile`](Makefile)..
 
 ## Chapter Contents
 
