@@ -12,7 +12,7 @@ make_assets:
   options:
     command: make
     locations:
-      - content/chapters/template-chapter/lecture
+      - chapters/template-chapter/template-topic/slides
     args:
       - all
 
@@ -22,7 +22,7 @@ embed_reveal:
     target: docusaurus
     extension: mdx
     build:
-      Template-chapter: Template-chapter
+      template-chapter-template-topic: template-chapter-template-topic
 
 docusaurus:
   plugin: docusaurus
@@ -30,15 +30,23 @@ docusaurus:
     course_name: Template
     sidebar: js
     structure:
-      - Introduction/: content/intro/
-      - Lecture:
-          - Template-Chapter: /build/embed_reveal/Template-chapter
-      - Lab:
-          path: content/chapters/template-chapter/
-          subsections:
-            - Template-chapter/: lab/
+      - Introduction: chapters/README.md
+      - Template Chapter:
+          - Template Topic:
+              path: chapters/template-chapter/template-topic/
+              extra:
+                - media/
+              subsections:
+                - Reading/: reading/
+                - Drills/: drills/
+                - Guides/: guides/
+                - Slides: /build/embed_reveal/template-chapter-template-topic
+          - Yet Another Topic:
+              path: chapters/template-chapter/yet-another-topic/
+              subsections:
+                - Drills/: drills/
     static_assets:
-      - Template-chapter: /build/make_assets/content/chapters/template-chapter/lecture/_site
+      - template-chapter-template-topic: /build/make_assets/chapters/template-chapter/template-topic/slides/_site
     config_meta:
       title: Template Repo
       url: http://localhost/
