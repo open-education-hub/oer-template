@@ -1,4 +1,0 @@
-BINARY = race_condition_spinlock
-CFLAGS = -g -Wall -Wextra -Werror -I ../utils -D USE_SPINLOCK
-LDLIBS = -lpthread
-include ../../../../../common/single.mk

@@ -1,4 +1,0 @@
-BINARY = race_condition_atomic
-CFLAGS = -g -Wall -Wextra -Werror -I ../utils -D ATOMIC
-LDLIBS = -lpthread
-include ../../../../../common/single.mk
