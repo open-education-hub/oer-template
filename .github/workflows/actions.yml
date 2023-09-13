@@ -6,14 +6,14 @@ on:
       - master
 
 jobs:
-  checkpatch:
-    name: Checkpatch
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkpatch
-        uses: open-education-hub/actions/checkpatch@main
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # checkpatch:
+  #   name: Checkpatch
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkpatch
+  #       uses: open-education-hub/actions/checkpatch@main
+  #       with:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   super-linter:
     name: Super Linter

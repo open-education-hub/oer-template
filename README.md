@@ -1,4 +1,4 @@
-# OER Template Repository
+# Without checkpath Repository
 
 These are open educational resources ([OER](https://en.wikipedia.org/wiki/Open_educational_resources)).
 The repository should be used as a template for the your own classes.
