@@ -5,12 +5,9 @@ The repository should be used as a template for the your own classes.
 
 ## Using the Content
 
-Content is located in the `content/` folder.
+Content is located in the `chapters/` folder.
 
 Each chapter has its own folder.
-Content for each chapter is split in two subfolders:
-* `lecture/`: content to be presented and discussed as part of lectures / presentations
-* `practice/`: content to be worked on as practical activities
 
 Lecture content is expected to be presented and followed.
 Practice content is expected to be used hands-on individually or as part of team.
@@ -20,11 +17,10 @@ Practice content is expected to be used hands-on individually or as part of team
 Before building the repository you have to set up the following items:
 
 * Select the GitHub Pages branch by following the [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) tutorial.
-   You will have to set up the `gh-pages` branch as the publishing branch.
-* Add a publishing key named `ACCESS_TOKEN` by following the [Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) tutorial.
+   You will have to set up the `gh-pages` branch as the publishing branch, if it is not already set up.
 
 In order to publish the content of this repository, we use a GitHub workflow located in `.github/workflows/deployment.yml`.
-This workflow will build the site using [Docusaurus](https://docusaurus.io/) and publish the contents to a link similar to `<github_username>.github.io`.
+This workflow will build the site using [Docusaurus](https://docusaurus.io/) and publish the contents to a link similar to `<github_username>.github.io/repository-name`.
 
 ## Your first TODOs
 
@@ -62,8 +58,6 @@ As the output of the command tells, point your browser to `http://localhost:8080
 
 ### Lecture
 
-Lecture content consists of slides, demos, media files and quizzes in the `lecture/` subfolder of each chapter.
-
 Slides are written in [GitHub Markdown](https://guides.github.com/features/mastering-markdown/) and use [reveal-md](https://github.com/webpro/reveal-md) and [reveal.js](https://revealjs.com/) to render HTML output.
 Building slides requires [MarkdownPP](https://github.com/amyreese/markdown-pp).
 Lecture slides are built from the `slides.mdpp` file using the `make` command (and the `Makefile`).
@@ -87,7 +81,7 @@ Quiz questions are stored in [Markdown format](https://guides.github.com/feature
 
 Practice content consists of background text, media files, support files and quizzes in the `practice/` subfolder of each chapter.
 
-Background text is located in `content/` folder as a series of sections.
+Background text is located in `chapters/` folder as a series of sections.
 Each section consists of general information, tutorial information followed by description of actual work items and a quiz.
 Sections are indexed in the `README.md` file.
 
