@@ -1,13 +1,13 @@
 # License
 
 The content of this repository is dual-licensed.
-Unless otherwise stated, text content and slides are licensed under the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license](https://creativecommons.org/licenses/by-sa/4.0/).
-Unless otherwise stated, support code is licensed under the [3-Clause BSD license](https://opensource.org/licenses/BSD-3-Clause) (SPDX short identifier: BSD-3-Clause).
+Reading content and slides are licensed under the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license](https://creativecommons.org/licenses/by-sa/4.0/).
+Support code is licensed under the [3-Clause BSD license](https://opensource.org/licenses/BSD-3-Clause) (SPDX short identifier: BSD-3-Clause).
 A copy of each license is below.
 
 Copy of CC BY-SA 4.0:
 
-```
+```text
 Attribution-NonCommercial-ShareAlike 4.0 International
 
 =======================================================================
@@ -449,7 +449,7 @@ Creative Commons may be contacted at creativecommons.org.
 
 Copy of BSD-3-Clause:
 
-```
+```text
 Copyright 2021 University POLITEHNICA of Bucharest
 
 Redistribution and use in source and binary forms, with or without
