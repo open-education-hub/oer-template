@@ -30,7 +30,7 @@ docusaurus:
     course_name: Template
     sidebar: js
     structure:
-      - Introduction: chapters/README.md
+      - Introduction: chapters/landing-page/README.md
       - Template Chapter:
           - Template Topic:
               path: chapters/template-chapter/template-topic/
