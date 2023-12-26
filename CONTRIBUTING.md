@@ -1,6 +1,6 @@
-# Contributing
+# Contributing to TODO Resources
 
-These are recommendations when contributing to the contents of this repository.
+These are recommendations when contributing to the contents of the TODO repository.
 They consider contributions to both actual content (mostly Markdown) and support code made via Git.
 
 ## First Steps
@@ -93,8 +93,7 @@ Signed-off-by: Your Name <your.email@example.com>
 Notice that the details above are the name and email that you configured earlier.
 
 Now the `git commit` command will open your default editor and ask you to write a commit message.
-Prefix each commit message title with the chapter it belongs to: `software-stack`, `data`, `compute`, `io`, `app-interact` and the component: `lecture` / `lab`.
-An example of a prefix is `compute/lab:`.
+Prefix each commit message name with the chapter and content type it belongs to, e.g. `TODO-chapter/reading`, `TODO-chapter/slides`, `TODO-chapter/drills`.
 Following the prefix, write a short and expressive title on the first line.
 Use commit messages with verbs at imperative mood: "Add README", "Update contents", "Introduce feature".
 
@@ -105,7 +104,7 @@ How a good commit message should look like: <https://cbea.ms/git-commit/>
 Below is an example of a good commit message:
 
 ```text
-data/lab: Fix Makefile `CFLAGS` error
+template-chapter/drills: Fix Makefile `CFLAGS` error
 
 `CFLAGS` was incorrectly set to optimise the code to the `-O3` level. This
 caused the function `vulnerable_func()` to be inlined into the caller
