@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -11,27 +11,35 @@
     <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
-
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            
 
 # TEMPLATE LECTURE
-</script></section><section ><section data-markdown><script type="text/template">
+
+---
+
 ### Included slides
 
 These slides have been included from the `intro.md` file.
 They also contain a list as follows:
 * item 1
 * item 2
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Slides including images
 
 ![CPU Internals](media/cpu-internals.jpg)
 
 * A slide can also include images included using `![CPU Internals](../media/cpu-internals.jpg)`
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### All Processes in a System
 
 ```
@@ -73,9 +81,13 @@ student@os:~$ ps -e
 ```
 
 Terminal listings work the same as in regular markdown files.
-</script></section></section><section  data-markdown><script type="text/template">
+
+---
+
 ## Slides hierarchy
-</script></section><section ><section data-markdown><script type="text/template">
+
+---
+
 ## Slides Hierarchy
 
 * Slides are organized in two levels
@@ -83,11 +95,15 @@ Terminal listings work the same as in regular markdown files.
        This leads to a new horizontal slide figuring a topic that can be expanded by vertical slides.
     * We expand discussions on the same topic by vertical slides.
        We use `----`, which adds a new vertical slide
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### New Vertical Slide
 
 * This slide illustrates a new item of discussion on the matter of the slides hierarchy
-</script></section></section><section  data-markdown><script type="text/template">
+
+---
+
 ### Animated Slides
 
 * You can even animate slides like this
@@ -98,7 +114,9 @@ clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, c
 student@os:~/.../compute/lecture/demo/create-thread$ strace -e clone ./create_thread
 clone(child_stack=0x7f9ea7df0fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, tls=0x7f9ea7df1700, child_tidptr=0x7f9ea7df19d0) = 5389
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+---
+
 ### Tables
 
 You can include tables:
@@ -109,13 +127,20 @@ You can include tables:
 | blocking actions stall process   | blocking actions only stall current thread |
 | more mapped on one kernel thread | provide support for user level threads     |
 | Java, Python                     | Linux KThreads, Windows threads            |
-</script></section><section  data-markdown><script type="text/template">
+
+---
+
 * We can include `*.md*` files in order to create modular courses
   * To include external files, we use the `!INCLUDE` directive
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -144,6 +169,9 @@ You can include tables:
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
         slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -156,12 +184,26 @@ You can include tables:
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"background-color":"aquamarine","transition":"none","slideNumber":true,"autoAnimateDuration":0}, queryOptions);
+      var options = extend(defaultOptions, {"background-color":"aquamarine","transition":"none","slideNumber":true,"autoAnimateDuration":0,"_":["slides.md"],"static":"_site"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>
